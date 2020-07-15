@@ -1,0 +1,113 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3501,        103]
+NotebookOptionsPosition[      2704,         76]
+NotebookOutlinePosition[      3078,         92]
+CellTagsIndexPosition[      3035,         89]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vowels", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<a\>\"", ",", "\"\<e\>\"", ",", "\"\<i\>\"", ",", "\"\<o\>\"", ",", 
+     "\"\<u\>\"", ",", "\"\<A\>\"", ",", "\"\<E\>\"", ",", "\"\<I\>\"", ",", 
+     "\"\<O\>\"", ",", "\"\<U\>\""}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"textIn", " ", "=", " ", "\"\<Hello I am Ceporro\>\""}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.8038321110578365`*^9, 3.803832124886875*^9}, {
+  3.8038322048312044`*^9, 3.8038322057507496`*^9}, {3.80383241313148*^9, 
+  3.803832434133345*^9}},ExpressionUUID->"a607fc4b-6b7c-4279-a910-\
+fab2439f5dca"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"charsIn", "=", 
+  RowBox[{"Characters", "[", "textIn", "]"}]}]], "Input",
+ CellChangeTimes->{{3.803832216339449*^9, 3.8038322219873514`*^9}},
+ NumberMarks->False,ExpressionUUID->"c64d589a-7f7e-4e3f-9e34-e43286250e86"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"H\"\>", ",", "\<\"e\"\>", ",", "\<\"l\"\>", ",", "\<\"l\"\>", 
+   ",", "\<\"o\"\>", ",", "\<\" \"\>", ",", "\<\"I\"\>", ",", "\<\" \"\>", 
+   ",", "\<\"a\"\>", ",", "\<\"m\"\>", ",", "\<\" \"\>", ",", "\<\"C\"\>", 
+   ",", "\<\"e\"\>", ",", "\<\"p\"\>", ",", "\<\"o\"\>", ",", "\<\"r\"\>", 
+   ",", "\<\"r\"\>", ",", "\<\"o\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.8038321372977047`*^9, 
+  3.8038322224670706`*^9},ExpressionUUID->"6c8c764c-7373-4733-8cf3-\
+a0d3f5024d4b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"textOut", "=", 
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"textIn", ",", 
+    RowBox[{"vowels", "\[Rule]", "\"\<_\>\""}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8038322684122705`*^9, 3.803832269755684*^9}, {
+  3.803832346127561*^9, 3.8038323464945817`*^9}, {3.8038323846466184`*^9, 
+  3.803832401889526*^9}, {3.80383245221901*^9, 
+  3.8038324546844187`*^9}},ExpressionUUID->"b783c6eb-72ef-412c-b141-\
+0930f9d36ccf"],
+
+Cell[BoxData["\<\"H_ll_ _ _m C_p_rr_\"\>"], "Output",
+ CellChangeTimes->{
+  3.8038324024290843`*^9, {3.8038324380040007`*^9, 
+   3.80383245559299*^9}},ExpressionUUID->"e5c36369-bebf-4d7a-b093-\
+58f00bba4a64"]
+}, Open  ]]
+},
+WindowSize->{775, 561},
+WindowMargins->{{287, Automatic}, {Automatic, 54}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 647, 14, 105, "Input", "ExpressionUUID" -> \
+"a607fc4b-6b7c-4279-a910-fab2439f5dca"],
+Cell[CellGroupData[{
+Cell[1230, 38, 241, 4, 46, "Input", "ExpressionUUID" -> \
+"c64d589a-7f7e-4e3f-9e34-e43286250e86"],
+Cell[1474, 44, 521, 9, 46, "Output", "ExpressionUUID" -> \
+"6c8c764c-7373-4733-8cf3-a0d3f5024d4b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2032, 58, 445, 9, 46, "Input", "ExpressionUUID" -> \
+"b783c6eb-72ef-412c-b141-0930f9d36ccf"],
+Cell[2480, 69, 208, 4, 79, "Output", "ExpressionUUID" -> \
+"e5c36369-bebf-4d7a-b093-58f00bba4a64"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
