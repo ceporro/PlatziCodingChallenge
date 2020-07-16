@@ -1,0 +1,545 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     24807,        537]
+NotebookOptionsPosition[     22967,        490]
+NotebookOutlinePosition[     23341,        506]
+CellTagsIndexPosition[     23298,        503]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"points1", " ", "=", " ", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"points2", " ", "=", " ", "0"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8039050434518967`*^9, 3.803905089272437*^9}, {
+  3.8039067979940395`*^9, 
+  3.8039067993404427`*^9}},ExpressionUUID->"718bdefc-95f7-4e05-8731-\
+9d5fe3492d08"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"rockPaperScissors", " ", "=", " ", 
+    RowBox[{"Function", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"player1", ",", " ", "player2"}], "}"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"player1", " ", "\[NotEqual]", "\"\<Rock\>\""}], "&&", 
+          RowBox[{"player1", " ", "\[NotEqual]", " ", "\"\<rock\>\""}], "&&", 
+          RowBox[{"player1", " ", "\[NotEqual]", " ", "\"\<Paper\>\""}], "&&", 
+          RowBox[{"player1", " ", "\[NotEqual]", " ", "\"\<paper\>\""}], "&&",
+           "  ", 
+          RowBox[{"player1", " ", "\[NotEqual]", " ", "\"\<Scissors\>\""}], "&&",
+           " ", 
+          RowBox[{"player1", " ", "\[NotEqual]", " ", "\"\<scissors\>\""}]}], 
+         ",", "\[IndentingNewLine]", "\t", 
+         RowBox[{"Print", "[", 
+          RowBox[{"Style", "[", 
+           RowBox[{"\"\<Invalid movement by player 1!\>\"", ",", "Red"}], 
+           "]"}], "]"}], ",", "\[IndentingNewLine]", "\t", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"player2", " ", "\[NotEqual]", "\"\<Rock\>\""}], "&&", 
+            RowBox[{"player2", " ", "\[NotEqual]", " ", "\"\<rock\>\""}], "&&", 
+            RowBox[{"player2", "\[NotEqual]", " ", "\"\<Paper\>\""}], "&&", 
+            RowBox[{"player2", " ", "\[NotEqual]", " ", "\"\<paper\>\""}], "&&", 
+            RowBox[{"player2", " ", "\[NotEqual]", " ", "\"\<Scissors\>\""}], 
+            "&&", 
+            RowBox[{
+            "player2", " ", "\[NotEqual]", " ", "\"\<scissors\>\""}]}], ",", 
+           "\[IndentingNewLine]", "\t", 
+           RowBox[{"Print", "[", 
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<Invalid movement by player 2!\>\"", ",", "Red"}], 
+             "]"}], "]"}], ",", "\[IndentingNewLine]", "\t", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"player1", "\[Equal]", "player2"}], ",", 
+             RowBox[{"Print", "[", "\"\<Tie!\>\"", "]"}], ",", 
+             "\[IndentingNewLine]", "\t\t   ", 
+             RowBox[{"Switch", "[", 
+              RowBox[{"player1", ",", "\[IndentingNewLine]", 
+               RowBox[{"(", 
+                RowBox[{"\"\<Rock\>\"", "|", "\"\<rock\>\""}], ")"}], ",", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"player2", "\[Equal]", "\"\<Paper\>\""}], "||", 
+                  RowBox[{"player2", "\[Equal]", "\"\<Paper\>\""}]}], ",", 
+                 RowBox[{
+                  RowBox[{"Print", "[", 
+                   RowBox[{"Style", "[", 
+                    RowBox[{"\"\<Player 2 wins!\>\"", ",", "Green"}], "]"}], 
+                   "]"}], ";", 
+                  RowBox[{"points2", "++"}]}], ",", 
+                 RowBox[{
+                  RowBox[{"Print", "[", 
+                   RowBox[{"Style", "[", 
+                    RowBox[{"\"\<Player 1 wins!\>\"", ",", "Magenta"}], "]"}],
+                    "]"}], ";", 
+                  RowBox[{"points1", "++"}]}]}], "]"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"(", 
+                RowBox[{"\"\<Paper\>\"", "|", "\"\<paper\>\""}], ")"}], ",", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"player2", "\[Equal]", "\"\<Scissors\>\""}], "||", 
+                  RowBox[{"player2", "\[Equal]", "\"\<scissors\>\""}]}], ",", 
+                 RowBox[{
+                  RowBox[{"Print", "[", 
+                   RowBox[{"Style", "[", 
+                    RowBox[{"\"\<Player 2 wins!\>\"", ",", "Green"}], "]"}], 
+                   "]"}], ";", 
+                  RowBox[{"points2", "++"}]}], ",", 
+                 RowBox[{
+                  RowBox[{"Print", "[", 
+                   RowBox[{"Style", "[", 
+                    RowBox[{"\"\<Player 1 wins!\>\"", ",", "Magenta"}], "]"}],
+                    "]"}], ";", 
+                  RowBox[{"points1", "++"}]}]}], "]"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"(", 
+                RowBox[{"\"\<Scissors\>\"", "|", "\"\<scissors\>\""}], ")"}], 
+               ",", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"player2", "\[Equal]", "\"\<Rock\>\""}], "||", 
+                  RowBox[{"player2", "\[Equal]", "\"\<rock\>\""}]}], ",", 
+                 RowBox[{
+                  RowBox[{"Print", "[", 
+                   RowBox[{"Style", "[", 
+                    RowBox[{"\"\<Player 2 wins!\>\"", ",", "Green"}], "]"}], 
+                   "]"}], ";", 
+                  RowBox[{"points2", "++"}]}], ",", 
+                 RowBox[{
+                  RowBox[{"Print", "[", 
+                   RowBox[{"Style", "[", 
+                    RowBox[{"\"\<Player 1 wins!\>\"", ",", "Magenta"}], "]"}],
+                    "]"}], ";", 
+                  RowBox[{"points1", "++"}]}]}], "]"}]}], 
+              "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}], 
+          "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"points1", "\[Equal]", "3"}], ",", 
+         RowBox[{
+          RowBox[{"Print", "[", 
+           RowBox[{"Framed", "[", 
+            RowBox[{
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<\\n PLAYER 1 WINS!!! \\n\>\"", ",", "Magenta"}], 
+              "]"}], ",", 
+             RowBox[{"FrameStyle", "\[Rule]", "Magenta"}], ",", 
+             RowBox[{"RoundingRadius", "\[Rule]", "10"}]}], "]"}], "]"}], ";", 
+          RowBox[{"points1", "=", "0"}], ";", 
+          RowBox[{"points2", "=", "0"}]}]}], "]"}], ";", 
+       "\[IndentingNewLine]", "  ", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"points2", "\[Equal]", "3"}], ",", 
+         RowBox[{
+          RowBox[{"Print", "[", 
+           RowBox[{"Framed", "[", 
+            RowBox[{
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<\\n PLAYER 2 WINS!!! \\n\>\"", ",", "Green"}], 
+              "]"}], ",", 
+             RowBox[{"FrameStyle", "\[Rule]", "Green"}], ",", 
+             RowBox[{"RoundingRadius", "\[Rule]", "10"}]}], "]"}], "]"}], ";", 
+          RowBox[{"points1", "=", "0"}], ";", 
+          RowBox[{"points2", "=", "0"}]}]}], "]"}], ";"}]}], 
+     "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.80390509505797*^9, 3.8039052459991174`*^9}, 
+   3.80390540130101*^9, {3.80390552214602*^9, 3.8039057456846004`*^9}, {
+   3.80390585568161*^9, 3.8039058621482906`*^9}, {3.8039063433202553`*^9, 
+   3.803906346073896*^9}, 3.8039067110563993`*^9, {3.8039068076592073`*^9, 
+   3.803906840608143*^9}, {3.803906892483495*^9, 3.803906910007663*^9}, {
+   3.8039069748832674`*^9, 3.803907007398361*^9}, {3.8039070541484137`*^9, 
+   3.803907125930559*^9}, {3.803907232566554*^9, 3.8039072968387976`*^9}, 
+   3.8039073515495486`*^9, {3.8039074141322803`*^9, 3.8039075131187134`*^9}, {
+   3.80390759273991*^9, 3.8039076070237656`*^9}, {3.803907657742178*^9, 
+   3.8039077247889814`*^9}, {3.803907758276477*^9, 3.803907890756395*^9}, {
+   3.803907925770811*^9, 3.8039079461254115`*^9}, {3.803907977125555*^9, 
+   3.8039080057390785`*^9}, {3.8039080730451975`*^9, 
+   3.8039080776139784`*^9}},ExpressionUUID->"5466dbd5-d9f3-413a-ad4d-\
+20c80219f955"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Switch", "[", 
+   RowBox[{"player1", ",", "\[IndentingNewLine]", 
+    RowBox[{"(", 
+     RowBox[{"\"\<Rock\>\"", "|", "\"\<rock\>\""}], ")"}], ",", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"player2", "\[Equal]", "\"\<Paper\>\""}], "||", 
+       RowBox[{"player2", "\[Equal]", "\"\<Paper\>\""}]}], ",", 
+      RowBox[{"Print", "[", "\"\<Player 2 wins!\>\"", "]"}], ",", 
+      RowBox[{"Print", "[", "\"\<Player 1 wins!\>\"", "]"}]}], "]"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"(", 
+     RowBox[{"\"\<Paper\>\"", "|", "\"\<paper\>\""}], ")"}], ",", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"player2", "\[Equal]", "\"\<Scissors\>\""}], "||", 
+       RowBox[{"player2", "\[Equal]", "\"\<scissors\>\""}]}], ",", 
+      RowBox[{"Print", "[", "\"\<Player 2 wins!\>\"", "]"}], ",", 
+      RowBox[{"Print", "[", "\"\<Player 1 wins!\>\"", "]"}]}], "]"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"(", 
+     RowBox[{"\"\<Scissors\>\"", "|", "\"\<scissors\>\""}], ")"}], ",", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"player2", "\[Equal]", "\"\<Rock\>\""}], "||", 
+       RowBox[{"player2", "\[Equal]", "\"\<rock\>\""}]}], ",", 
+      RowBox[{"Print", "[", "\"\<Player 2 wins!\>\"", "]"}], ",", 
+      RowBox[{"Print", "[", "\"\<Player 1 wins!\>\"", "]"}]}], "]"}]}], 
+   "\[IndentingNewLine]", "]"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.8039054211499543`*^9, 3.8039055007621727`*^9}, {
+  3.8039055809997215`*^9, 3.803905583900967*^9}, {3.8039058718314185`*^9, 
+  3.8039060109396486`*^9}, {3.803906118200938*^9, 3.8039061440458584`*^9}, {
+  3.8039062434880795`*^9, 3.8039062572602673`*^9}, {3.803906362237725*^9, 
+  3.8039065605716047`*^9}, {3.803906598347642*^9, 3.80390663378194*^9}, {
+  3.8039066838321614`*^9, 
+  3.803906746021946*^9}},ExpressionUUID->"20a9fe4b-e08a-45f6-b447-\
+0126fa00d51a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"rockPaperScissors", "[", 
+  RowBox[{"\"\<Roack\>\"", ",", "\"\<Paper\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"rockPaperScissors", "[", 
+  RowBox[{"\"\<Rock\>\"", ",", "\"\<Rock\>\""}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"rockPaperScissors", "[", 
+  RowBox[{"\"\<Rock\>\"", ",", "\"\<Paper\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"rockPaperScissors", "[", 
+  RowBox[{"\"\<Rock\>\"", ",", "\"\<Paper\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"rockPaperScissors", "[", 
+  RowBox[{"\"\<Rock\>\"", ",", "\"\<Scissors\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"rockPaperScissors", "[", 
+  RowBox[{"\"\<Rock\>\"", ",", "\"\<Scissors\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"rockPaperScissors", "[", 
+  RowBox[{"\"\<Rock\>\"", ",", "\"\<Scissors\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"rockPaperScissors", "[", 
+  RowBox[{"\"\<Rock\>\"", ",", "\"\<Paper\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"rockPaperScissors", "[", 
+  RowBox[{"\"\<Rock\>\"", ",", "\"\<Papeir\>\""}], "]"}]}], "Input",
+ CellChangeTimes->{{3.8039067513227806`*^9, 3.8039067732551594`*^9}, {
+   3.8039070653434906`*^9, 3.803907066218186*^9}, {3.8039071344707355`*^9, 
+   3.8039071475258408`*^9}, {3.803907365148197*^9, 3.8039073876351333`*^9}, 
+   3.8039074656316323`*^9, 
+   3.8039077863285036`*^9},ExpressionUUID->"652bf5c6-a114-41a9-b358-\
+4cd7ee1f5b31"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ StyleBox["\<\"Invalid movement by player 1!\"\>",
+  StripOnInput->False,
+  LineColor->RGBColor[1, 0, 0],
+  FrontFaceColor->RGBColor[1, 0, 0],
+  BackFaceColor->RGBColor[1, 0, 0],
+  GraphicsColor->RGBColor[1, 0, 0],
+  FontColor->RGBColor[1, 0, 0]]], "Print",
+ CellChangeTimes->{{3.8039067630763655`*^9, 3.803906774133814*^9}, 
+   3.803907015976436*^9, {3.8039070596836534`*^9, 3.803907066870409*^9}, {
+   3.803907132023309*^9, 3.803907148156155*^9}, 3.8039072366955137`*^9, {
+   3.803907299985368*^9, 3.8039073216255198`*^9}, {3.8039073543929424`*^9, 
+   3.803907432377511*^9}, 3.80390746684838*^9, 3.8039075084502244`*^9, 
+   3.8039076132480965`*^9, 3.803907672917615*^9, {3.803907712268446*^9, 
+   3.8039077285040493`*^9}, {3.8039077804671683`*^9, 3.803907832488166*^9}, {
+   3.8039078630474524`*^9, 3.8039078792331924`*^9}, {3.8039079326115294`*^9, 
+   3.8039079491483307`*^9}, {3.803907983086624*^9, 3.803908008526628*^9}, 
+   3.803908081022868*^9},ExpressionUUID->"29a25f07-9c9e-4c8a-bb25-\
+057d2a9eeb57"],
+
+Cell[BoxData["\<\"Tie!\"\>"], "Print",
+ CellChangeTimes->{{3.8039067630763655`*^9, 3.803906774133814*^9}, 
+   3.803907015976436*^9, {3.8039070596836534`*^9, 3.803907066870409*^9}, {
+   3.803907132023309*^9, 3.803907148156155*^9}, 3.8039072366955137`*^9, {
+   3.803907299985368*^9, 3.8039073216255198`*^9}, {3.8039073543929424`*^9, 
+   3.803907432377511*^9}, 3.80390746684838*^9, 3.8039075084502244`*^9, 
+   3.8039076132480965`*^9, 3.803907672917615*^9, {3.803907712268446*^9, 
+   3.8039077285040493`*^9}, {3.8039077804671683`*^9, 3.803907832488166*^9}, {
+   3.8039078630474524`*^9, 3.8039078792331924`*^9}, {3.8039079326115294`*^9, 
+   3.8039079491483307`*^9}, {3.803907983086624*^9, 3.803908008526628*^9}, 
+   3.803908081028849*^9},ExpressionUUID->"6a6dc5a1-535c-4e8d-b4a2-\
+2565e6cccad4"],
+
+Cell[BoxData[
+ StyleBox["\<\"Player 2 wins!\"\>",
+  StripOnInput->False,
+  LineColor->RGBColor[0, 1, 0],
+  FrontFaceColor->RGBColor[0, 1, 0],
+  BackFaceColor->RGBColor[0, 1, 0],
+  GraphicsColor->RGBColor[0, 1, 0],
+  FontColor->RGBColor[0, 1, 0]]], "Print",
+ CellChangeTimes->{{3.8039067630763655`*^9, 3.803906774133814*^9}, 
+   3.803907015976436*^9, {3.8039070596836534`*^9, 3.803907066870409*^9}, {
+   3.803907132023309*^9, 3.803907148156155*^9}, 3.8039072366955137`*^9, {
+   3.803907299985368*^9, 3.8039073216255198`*^9}, {3.8039073543929424`*^9, 
+   3.803907432377511*^9}, 3.80390746684838*^9, 3.8039075084502244`*^9, 
+   3.8039076132480965`*^9, 3.803907672917615*^9, {3.803907712268446*^9, 
+   3.8039077285040493`*^9}, {3.8039077804671683`*^9, 3.803907832488166*^9}, {
+   3.8039078630474524`*^9, 3.8039078792331924`*^9}, {3.8039079326115294`*^9, 
+   3.8039079491483307`*^9}, {3.803907983086624*^9, 3.803908008526628*^9}, 
+   3.8039080810348344`*^9},ExpressionUUID->"3b17e32c-4a15-4681-a1b7-\
+d98c22d5b727"],
+
+Cell[BoxData[
+ StyleBox["\<\"Player 2 wins!\"\>",
+  StripOnInput->False,
+  LineColor->RGBColor[0, 1, 0],
+  FrontFaceColor->RGBColor[0, 1, 0],
+  BackFaceColor->RGBColor[0, 1, 0],
+  GraphicsColor->RGBColor[0, 1, 0],
+  FontColor->RGBColor[0, 1, 0]]], "Print",
+ CellChangeTimes->{{3.8039067630763655`*^9, 3.803906774133814*^9}, 
+   3.803907015976436*^9, {3.8039070596836534`*^9, 3.803907066870409*^9}, {
+   3.803907132023309*^9, 3.803907148156155*^9}, 3.8039072366955137`*^9, {
+   3.803907299985368*^9, 3.8039073216255198`*^9}, {3.8039073543929424`*^9, 
+   3.803907432377511*^9}, 3.80390746684838*^9, 3.8039075084502244`*^9, 
+   3.8039076132480965`*^9, 3.803907672917615*^9, {3.803907712268446*^9, 
+   3.8039077285040493`*^9}, {3.8039077804671683`*^9, 3.803907832488166*^9}, {
+   3.8039078630474524`*^9, 3.8039078792331924`*^9}, {3.8039079326115294`*^9, 
+   3.8039079491483307`*^9}, {3.803907983086624*^9, 3.803908008526628*^9}, 
+   3.803908081038826*^9},ExpressionUUID->"c742336c-d253-45bb-b150-\
+112f41e10fd6"],
+
+Cell[BoxData[
+ FrameBox[
+  StyleBox["\<\"\\n PLAYER 2 WINS!!! \\n\"\>",
+   StripOnInput->False,
+   LineColor->RGBColor[0, 1, 0],
+   FrontFaceColor->RGBColor[0, 1, 0],
+   BackFaceColor->RGBColor[0, 1, 0],
+   GraphicsColor->RGBColor[0, 1, 0],
+   FontColor->RGBColor[0, 1, 0]],
+  FrameStyle->RGBColor[0, 1, 0],
+  RoundingRadius->10,
+  StripOnInput->False]], "Print",
+ CellChangeTimes->{{3.8039067630763655`*^9, 3.803906774133814*^9}, 
+   3.803907015976436*^9, {3.8039070596836534`*^9, 3.803907066870409*^9}, {
+   3.803907132023309*^9, 3.803907148156155*^9}, 3.8039072366955137`*^9, {
+   3.803907299985368*^9, 3.8039073216255198`*^9}, {3.8039073543929424`*^9, 
+   3.803907432377511*^9}, 3.80390746684838*^9, 3.8039075084502244`*^9, 
+   3.8039076132480965`*^9, 3.803907672917615*^9, {3.803907712268446*^9, 
+   3.8039077285040493`*^9}, {3.8039077804671683`*^9, 3.803907832488166*^9}, {
+   3.8039078630474524`*^9, 3.8039078792331924`*^9}, {3.8039079326115294`*^9, 
+   3.8039079491483307`*^9}, {3.803907983086624*^9, 3.803908008526628*^9}, 
+   3.803908081043815*^9},ExpressionUUID->"13d2e453-cfe4-41ce-9e0f-\
+507bb26f239b"],
+
+Cell[BoxData[
+ StyleBox["\<\"Player 1 wins!\"\>",
+  StripOnInput->False,
+  LineColor->RGBColor[1, 0, 1],
+  FrontFaceColor->RGBColor[1, 0, 1],
+  BackFaceColor->RGBColor[1, 0, 1],
+  GraphicsColor->RGBColor[1, 0, 1],
+  FontColor->RGBColor[1, 0, 1]]], "Print",
+ CellChangeTimes->{{3.8039067630763655`*^9, 3.803906774133814*^9}, 
+   3.803907015976436*^9, {3.8039070596836534`*^9, 3.803907066870409*^9}, {
+   3.803907132023309*^9, 3.803907148156155*^9}, 3.8039072366955137`*^9, {
+   3.803907299985368*^9, 3.8039073216255198`*^9}, {3.8039073543929424`*^9, 
+   3.803907432377511*^9}, 3.80390746684838*^9, 3.8039075084502244`*^9, 
+   3.8039076132480965`*^9, 3.803907672917615*^9, {3.803907712268446*^9, 
+   3.8039077285040493`*^9}, {3.8039077804671683`*^9, 3.803907832488166*^9}, {
+   3.8039078630474524`*^9, 3.8039078792331924`*^9}, {3.8039079326115294`*^9, 
+   3.8039079491483307`*^9}, {3.803907983086624*^9, 3.803908008526628*^9}, 
+   3.8039080810487967`*^9},ExpressionUUID->"cd0dc5b1-bcc5-4285-a09d-\
+5244e6025309"],
+
+Cell[BoxData[
+ StyleBox["\<\"Player 1 wins!\"\>",
+  StripOnInput->False,
+  LineColor->RGBColor[1, 0, 1],
+  FrontFaceColor->RGBColor[1, 0, 1],
+  BackFaceColor->RGBColor[1, 0, 1],
+  GraphicsColor->RGBColor[1, 0, 1],
+  FontColor->RGBColor[1, 0, 1]]], "Print",
+ CellChangeTimes->{{3.8039067630763655`*^9, 3.803906774133814*^9}, 
+   3.803907015976436*^9, {3.8039070596836534`*^9, 3.803907066870409*^9}, {
+   3.803907132023309*^9, 3.803907148156155*^9}, 3.8039072366955137`*^9, {
+   3.803907299985368*^9, 3.8039073216255198`*^9}, {3.8039073543929424`*^9, 
+   3.803907432377511*^9}, 3.80390746684838*^9, 3.8039075084502244`*^9, 
+   3.8039076132480965`*^9, 3.803907672917615*^9, {3.803907712268446*^9, 
+   3.8039077285040493`*^9}, {3.8039077804671683`*^9, 3.803907832488166*^9}, {
+   3.8039078630474524`*^9, 3.8039078792331924`*^9}, {3.8039079326115294`*^9, 
+   3.8039079491483307`*^9}, {3.803907983086624*^9, 3.803908008526628*^9}, 
+   3.8039080810528193`*^9},ExpressionUUID->"6355c444-5088-4c7a-9df8-\
+4876b156a7a2"],
+
+Cell[BoxData[
+ StyleBox["\<\"Player 1 wins!\"\>",
+  StripOnInput->False,
+  LineColor->RGBColor[1, 0, 1],
+  FrontFaceColor->RGBColor[1, 0, 1],
+  BackFaceColor->RGBColor[1, 0, 1],
+  GraphicsColor->RGBColor[1, 0, 1],
+  FontColor->RGBColor[1, 0, 1]]], "Print",
+ CellChangeTimes->{{3.8039067630763655`*^9, 3.803906774133814*^9}, 
+   3.803907015976436*^9, {3.8039070596836534`*^9, 3.803907066870409*^9}, {
+   3.803907132023309*^9, 3.803907148156155*^9}, 3.8039072366955137`*^9, {
+   3.803907299985368*^9, 3.8039073216255198`*^9}, {3.8039073543929424`*^9, 
+   3.803907432377511*^9}, 3.80390746684838*^9, 3.8039075084502244`*^9, 
+   3.8039076132480965`*^9, 3.803907672917615*^9, {3.803907712268446*^9, 
+   3.8039077285040493`*^9}, {3.8039077804671683`*^9, 3.803907832488166*^9}, {
+   3.8039078630474524`*^9, 3.8039078792331924`*^9}, {3.8039079326115294`*^9, 
+   3.8039079491483307`*^9}, {3.803907983086624*^9, 3.803908008526628*^9}, 
+   3.8039080810577726`*^9},ExpressionUUID->"845b26f8-28a3-4298-aac3-\
+db6cc1f5a2b4"],
+
+Cell[BoxData[
+ FrameBox[
+  StyleBox["\<\"\\n PLAYER 1 WINS!!! \\n\"\>",
+   StripOnInput->False,
+   LineColor->RGBColor[1, 0, 1],
+   FrontFaceColor->RGBColor[1, 0, 1],
+   BackFaceColor->RGBColor[1, 0, 1],
+   GraphicsColor->RGBColor[1, 0, 1],
+   FontColor->RGBColor[1, 0, 1]],
+  FrameStyle->RGBColor[1, 0, 1],
+  RoundingRadius->10,
+  StripOnInput->False]], "Print",
+ CellChangeTimes->{{3.8039067630763655`*^9, 3.803906774133814*^9}, 
+   3.803907015976436*^9, {3.8039070596836534`*^9, 3.803907066870409*^9}, {
+   3.803907132023309*^9, 3.803907148156155*^9}, 3.8039072366955137`*^9, {
+   3.803907299985368*^9, 3.8039073216255198`*^9}, {3.8039073543929424`*^9, 
+   3.803907432377511*^9}, 3.80390746684838*^9, 3.8039075084502244`*^9, 
+   3.8039076132480965`*^9, 3.803907672917615*^9, {3.803907712268446*^9, 
+   3.8039077285040493`*^9}, {3.8039077804671683`*^9, 3.803907832488166*^9}, {
+   3.8039078630474524`*^9, 3.8039078792331924`*^9}, {3.8039079326115294`*^9, 
+   3.8039079491483307`*^9}, {3.803907983086624*^9, 3.803908008526628*^9}, 
+   3.803908081063757*^9},ExpressionUUID->"c3f31770-9dee-428c-8469-\
+b2909e58076e"],
+
+Cell[BoxData[
+ StyleBox["\<\"Player 2 wins!\"\>",
+  StripOnInput->False,
+  LineColor->RGBColor[0, 1, 0],
+  FrontFaceColor->RGBColor[0, 1, 0],
+  BackFaceColor->RGBColor[0, 1, 0],
+  GraphicsColor->RGBColor[0, 1, 0],
+  FontColor->RGBColor[0, 1, 0]]], "Print",
+ CellChangeTimes->{{3.8039067630763655`*^9, 3.803906774133814*^9}, 
+   3.803907015976436*^9, {3.8039070596836534`*^9, 3.803907066870409*^9}, {
+   3.803907132023309*^9, 3.803907148156155*^9}, 3.8039072366955137`*^9, {
+   3.803907299985368*^9, 3.8039073216255198`*^9}, {3.8039073543929424`*^9, 
+   3.803907432377511*^9}, 3.80390746684838*^9, 3.8039075084502244`*^9, 
+   3.8039076132480965`*^9, 3.803907672917615*^9, {3.803907712268446*^9, 
+   3.8039077285040493`*^9}, {3.8039077804671683`*^9, 3.803907832488166*^9}, {
+   3.8039078630474524`*^9, 3.8039078792331924`*^9}, {3.8039079326115294`*^9, 
+   3.8039079491483307`*^9}, {3.803907983086624*^9, 3.803908008526628*^9}, 
+   3.803908081067745*^9},ExpressionUUID->"c98c5147-bbb8-44a3-ad0c-\
+e16f08e36c41"],
+
+Cell[BoxData[
+ StyleBox["\<\"Invalid movement by player 2!\"\>",
+  StripOnInput->False,
+  LineColor->RGBColor[1, 0, 0],
+  FrontFaceColor->RGBColor[1, 0, 0],
+  BackFaceColor->RGBColor[1, 0, 0],
+  GraphicsColor->RGBColor[1, 0, 0],
+  FontColor->RGBColor[1, 0, 0]]], "Print",
+ CellChangeTimes->{{3.8039067630763655`*^9, 3.803906774133814*^9}, 
+   3.803907015976436*^9, {3.8039070596836534`*^9, 3.803907066870409*^9}, {
+   3.803907132023309*^9, 3.803907148156155*^9}, 3.8039072366955137`*^9, {
+   3.803907299985368*^9, 3.8039073216255198`*^9}, {3.8039073543929424`*^9, 
+   3.803907432377511*^9}, 3.80390746684838*^9, 3.8039075084502244`*^9, 
+   3.8039076132480965`*^9, 3.803907672917615*^9, {3.803907712268446*^9, 
+   3.8039077285040493`*^9}, {3.8039077804671683`*^9, 3.803907832488166*^9}, {
+   3.8039078630474524`*^9, 3.8039078792331924`*^9}, {3.8039079326115294`*^9, 
+   3.8039079491483307`*^9}, {3.803907983086624*^9, 3.803908008526628*^9}, 
+   3.8039080810717344`*^9},ExpressionUUID->"1a292238-a369-4f64-8863-\
+d4ad683bc38f"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1366, 685},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 350, 8, 76, "Input", "ExpressionUUID" -> \
+"718bdefc-95f7-4e05-8731-9d5fe3492d08"],
+Cell[911, 30, 7469, 155, 953, "Input", "ExpressionUUID" -> \
+"5466dbd5-d9f3-413a-ad4d-20c80219f955"],
+Cell[8383, 187, 1930, 41, 195, "Input", "ExpressionUUID" -> \
+"20a9fe4b-e08a-45f6-b447-0126fa00d51a"],
+Cell[CellGroupData[{
+Cell[10338, 232, 1422, 31, 279, "Input", "ExpressionUUID" -> \
+"652bf5c6-a114-41a9-b358-4cd7ee1f5b31"],
+Cell[CellGroupData[{
+Cell[11785, 267, 1023, 18, 34, "Print", "ExpressionUUID" -> \
+"29a25f07-9c9e-4c8a-bb25-057d2a9eeb57"],
+Cell[12811, 287, 790, 11, 34, "Print", "ExpressionUUID" -> \
+"6a6dc5a1-535c-4e8d-b4a2-2565e6cccad4"],
+Cell[13604, 300, 1010, 18, 34, "Print", "ExpressionUUID" -> \
+"3b17e32c-4a15-4681-a1b7-d98c22d5b727"],
+Cell[14617, 320, 1008, 18, 34, "Print", "ExpressionUUID" -> \
+"c742336c-d253-45bb-b150-112f41e10fd6"],
+Cell[15628, 340, 1115, 22, 110, "Print", "ExpressionUUID" -> \
+"13d2e453-cfe4-41ce-9e0f-507bb26f239b"],
+Cell[16746, 364, 1010, 18, 34, "Print", "ExpressionUUID" -> \
+"cd0dc5b1-bcc5-4285-a09d-5244e6025309"],
+Cell[17759, 384, 1010, 18, 34, "Print", "ExpressionUUID" -> \
+"6355c444-5088-4c7a-9df8-4876b156a7a2"],
+Cell[18772, 404, 1010, 18, 34, "Print", "ExpressionUUID" -> \
+"845b26f8-28a3-4298-aac3-db6cc1f5a2b4"],
+Cell[19785, 424, 1115, 22, 110, "Print", "ExpressionUUID" -> \
+"c3f31770-9dee-428c-8469-b2909e58076e"],
+Cell[20903, 448, 1008, 18, 34, "Print", "ExpressionUUID" -> \
+"c98c5147-bbb8-44a3-ad0c-e16f08e36c41"],
+Cell[21914, 468, 1025, 18, 34, "Print", "ExpressionUUID" -> \
+"1a292238-a369-4f64-8863-d4ad683bc38f"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
