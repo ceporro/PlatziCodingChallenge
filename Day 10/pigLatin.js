@@ -51,10 +51,9 @@ function translate(textIn){
     if( vowels.includes( textIn[ wordStart[ wordStart.length-1 ] ] ))
         textIn +=  addWhenVowel 
     else
-    {
         textIn = textIn.substring(0, wordStart[ wordStart.length-1 ]) + textIn.substring(wordStart[wordStart.length-1]+1, textIn.length) + textIn[wordStart[wordStart.length-1]] + addWhenConsonant 
 
-    }
+
     console.log(textIn)
 }
 
