@@ -1,0 +1,102 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3134,         92]
+NotebookOptionsPosition[      2534,         72]
+NotebookOutlinePosition[      2878,         87]
+CellTagsIndexPosition[      2835,         84]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"bank1Month", "=", "0.04"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"bank1Year", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"bank2Month", "=", "0.03"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"bank2Year", "=", "0.07"}], ";"}]}], "Input",ExpressionUUID->\
+"14e8edee-6452-4fe0-b02c-719628efda3e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"calculateFinalMoney", "=", 
+   RowBox[{"Function", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"month", ",", "year", ",", " ", "initial", ",", " ", "months"}],
+       "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"finalMoney", "=", "initial"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"i", "=", "1"}], ",", 
+        RowBox[{"i", "<=", "months"}], ",", " ", 
+        RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"finalMoney", "*=", 
+          RowBox[{"1", "+", "month"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Mod", "[", 
+             RowBox[{"i", ",", "12"}], "]"}], "\[Equal]", "0"}], ",", 
+           RowBox[{"finalMoney", "*=", 
+            RowBox[{"1", "+", "year"}]}], ",", " ", 
+           RowBox[{"finalMoney", "*=", "1"}]}], "]"}]}]}], 
+       "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Print", "[", "finalMoney", "]"}]}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}]], "Input",ExpressionUUID->"cfc50faf-0ba8-43fd-a8e6-\
+922c6214c831"],
+
+Cell[BoxData[
+ RowBox[{"calculateFinalMoney", "[", 
+  RowBox[{"bank1Month", ",", "bank1Year", ",", "100", ",", "24"}], 
+  "]"}]], "Input",ExpressionUUID->"e8d1096e-6810-42ca-ad59-4f158a0cc22f"],
+
+Cell[BoxData[
+ RowBox[{"calculateFinalMoney", "[", 
+  RowBox[{"bank2Month", ",", "bank2Year", ",", "100", ",", "24"}], 
+  "]"}]], "Input",ExpressionUUID->"c3fa797d-acca-4cb1-be61-a281604656d5"]
+},
+WindowSize->{775, 561},
+WindowMargins->{{287, Automatic}, {Automatic, 54}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 373, 9, 88, "Input", "ExpressionUUID" -> \
+"14e8edee-6452-4fe0-b02c-719628efda3e"],
+Cell[934, 31, 1204, 29, 164, "Input", "ExpressionUUID" -> \
+"cfc50faf-0ba8-43fd-a8e6-922c6214c831"],
+Cell[2141, 62, 193, 3, 30, "Input", "ExpressionUUID" -> \
+"e8d1096e-6810-42ca-ad59-4f158a0cc22f"],
+Cell[2337, 67, 193, 3, 30, "Input", "ExpressionUUID" -> \
+"c3fa797d-acca-4cb1-be61-a281604656d5"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
