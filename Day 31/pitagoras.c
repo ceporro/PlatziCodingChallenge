@@ -8,7 +8,7 @@ int main()
 {
 
     int p1[2] = {0,0};
-    int p2[2] = {3,4};
+    int p2[2] = {4,4};
 
     distance(p1, p2);
 
@@ -17,6 +17,6 @@ int main()
 
 void distance(  int p1[], int p2[] ){
 
-    int d = sqrt( pow( (p1[0] - p2[0]), 2 ) + pow( (p1[1] - p2[1]), 2 ) );
-    printf("The distance between the points is %d \n", d);
+    float d = sqrt( pow( (p1[0] - p2[0]), 2 ) + pow( (p1[1] - p2[1]), 2 ) );
+    printf("The distance between the points is %f \n", d);
 }
