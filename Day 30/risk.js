@@ -67,9 +67,9 @@ function battle(){
         for(let i=0; i<2; i++){
           
             if( player1[i] > player2[i] )
-            soldiers2--
-            if( player2[i] > player1[i] )
-            soldiers1--
+                soldiers2--
+            else 
+                soldiers1--
 
         }
 

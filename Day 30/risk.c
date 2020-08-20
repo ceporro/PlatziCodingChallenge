@@ -44,7 +44,7 @@ int main()
             
                 if( newp1[i] > newp2[i] )
                     soldiers2--;
-                if( newp2[i] > newp1[i] )
+                else
                     soldiers1--;
 
             }
