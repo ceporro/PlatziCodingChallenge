@@ -20,7 +20,7 @@ function findPrimeNumbers(limit){
 
     let primeNumbers = []
 
-    for(let i=0; i<=limit; i++){
+    for(let i=2; i<=limit; i++){
 
         let divisors = findDivisors(i)
 

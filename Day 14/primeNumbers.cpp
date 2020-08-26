@@ -48,7 +48,7 @@ int countPrimeNumbers(int max){
     
     int i,j;
     j=0;
-    for(i=1; i<=max; i++){
+    for(i=2; i<=max; i++){
         if(isPrime(i)){
             j++;
         }
@@ -63,7 +63,7 @@ void findPrimeNumbers(int max){
     int primeNumbers[counter];
     int i,j;
     j=0;
-    for(i=1; i<=max; i++){
+    for(i=2; i<=max; i++){
         if( isPrime(i) ){
             primeNumbers[j] = i;
             j++;
