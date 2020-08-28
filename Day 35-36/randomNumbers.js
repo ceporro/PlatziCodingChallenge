@@ -17,3 +17,11 @@ function throwDices(faces){
 throwDices(6)
 throwDices(10)
 throwDices(12)
+
+let n = prompt('How many times do you want to throw the dice?')
+
+for(let i=0; i<n; i++ ){
+
+    throwDices(14)
+
+}
