@@ -8,6 +8,7 @@ int arrayTotal(int * array, int len);
 int main()
 {
 
+    diceBattle(2);
     diceBattle(5);
     diceBattle(8);
     diceBattle(10);
